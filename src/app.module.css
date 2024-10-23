@@ -1,0 +1,65 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.main {
+  background-color: var(--white)
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-itens: center;
+  height: 14rem;
+  background-color: var(--gray-700);
+  position: relative;
+}
+
+.header img {
+  width: 150px;
+}
+
+.header form {
+  position: absolute;
+  bottom: -20px;
+  display: flex;
+  gap: 8px;
+  width: 50%;
+  height: 48px;
+}
+
+.header form input {
+  flex: 1;
+  padding: 15px 15px;
+  border-radius: 4px;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  border: 0;
+}
+
+.header form button {
+  border-radius: 4px;
+  line-height: 1rem;
+  padding-left: 21px;
+  padding-right: 21px;
+  font-size: 1rem;
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  border: 0;
+}
