@@ -1,8 +1,12 @@
+import { FormEvent, useState } from 'react'
+
 import logo from './assets/todo-logo.svg'
 import plusIcon from './assets/plus.svg'
+import checkIcon from './assets/check.svg'
+import uncheckIcon from './assets/uncheck.svg'
+import trashIcon from './assets/trash.svg'
 
 import styles from './app.module.css'
-import { FormEvent, useState } from 'react'
 
 export function App() {
 
@@ -38,16 +42,50 @@ export function App() {
         <div className={styles.tasksHeader}>
           <div>
             <span>Tarefas criadas</span>
-            <span className={styles.resultBox}>0</span>
+            <span className={styles.resultBox}>5</span>
           </div>
           <div>
             <span>Tarefas criadas</span>
-            <span className={styles.resultBox}>0</span>
+            <span className={styles.resultBox}>2 de 5</span>
           </div>
         </div>
 
-        <div className='tasks'>
-          
+        <div className={styles.tasks}>
+          <div className={`${styles.task}`}>
+            <div>
+              <button>
+                <img src={uncheckIcon} style={{width: 24, height: 24}}/>
+              </button>
+            </div>
+
+            <p>
+              aaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaa
+            </p>
+
+            <div>
+              <button>
+                <img src={trashIcon} style={{width: 24, height: 24}}/>
+              </button>
+            </div>
+          </div>
+
+          <div className={`${styles.task} ${styles.finished}`}>
+            <div>
+              <button>
+                <img src={checkIcon} style={{width: 24, height: 24}}/>
+              </button>
+            </div>
+
+            <p>
+              aaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaaaaa aaaaaaaaaaaa aaa aaaaaa
+            </p>
+
+            <div>
+              <button>
+                <img src={trashIcon} style={{width: 24, height: 24}}/>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
