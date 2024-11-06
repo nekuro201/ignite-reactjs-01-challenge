@@ -18,7 +18,9 @@ export function App() {
     <div className={styles.main}>
       <div className={styles.header}>
         <img src={logo} className="logo" alt="Vite logo" />
+      </div>
 
+      <div className={styles.tasksContainer}>
         <form onSubmit={handleSubmit}>
           <input 
             type='text' 
@@ -32,9 +34,7 @@ export function App() {
             <img src={plusIcon} />
           </button>
         </form>
-      </div>
 
-      <div className={styles.tasksContainer}>
         <div className={styles.tasksHeader}>
           <div>
             <span>Tarefas criadas</span>
