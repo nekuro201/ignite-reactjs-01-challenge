@@ -50,7 +50,7 @@ form input {
   border-radius: 8px;
   background-color: var(--gray-500);
   color: var(--gray-100);
-  border: 2px solid;
+  border: 1px solid;
   border-color: var(--gray-700);
   font-size: 1.15rem;
 }
@@ -130,11 +130,11 @@ form button img {
 }
 
 .tasksHeader div:nth-child(1) {
-  color: var(--purple)
+  color: var(--blue)
 }
 
 .tasksHeader div:nth-child(2) {
-  color: var(--blue)
+  color: var(--purple)
 }
 
 .resultBox {
