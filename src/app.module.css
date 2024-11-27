@@ -149,6 +149,7 @@ form button img {
   flex-direction: column;
   width: 100%;
   gap: 12px;
+  padding-bottom: 44px;
 }
 
 .task {
