@@ -2,7 +2,7 @@
   "homepage": "https://nekuro201.github.io/ignite-reactjs-01-challenge/",
   "name": "ignite-reactjs-01-challenge",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
