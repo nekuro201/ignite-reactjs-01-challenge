@@ -1,6 +1,11 @@
 # ignite-reactjs-01-challenge
 Rocketseat Ignite Challenge 1 on ReactJS Concepts - TODO LIST
 
+
+<div align="center" margin-top="60px" >
+  <img src="https://i.imgur.com/LBoAYGT.png" alt="todo" />
+</div>
+
 # 🚀 About - Sobre o desafio
 
 Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no estilo **to-do list**, que contém as seguintes funcionalidades:
