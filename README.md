@@ -24,7 +24,7 @@ Apesar de serem poucas funcionalidades, você vai precisar relembrar conceitos c
 - Componentização
 
 ### Design
-https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate
+https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List
 
 ## 💻 Getting started
 
