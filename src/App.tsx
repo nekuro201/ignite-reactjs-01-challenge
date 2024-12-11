@@ -2,22 +2,15 @@ import { FormEvent, useState } from 'react'
 
 import logo from './assets/todo-logo.svg'
 import plusIcon from './assets/plus.svg'
-import checkIcon from './assets/check.svg'
-import uncheckIcon from './assets/uncheck.svg'
-import trashIcon from './assets/trash.svg'
 
 import styles from './app.module.css'
 
-interface Task {
-  createdAt: string
-  text: string
-  isFinished?: boolean
-}
+import { ITask, Task } from './components/task'
 
 export function App() {
 
   const [taskInput, setTaskInput] = useState("")
-  const [tasks, setTasks] = useState<Task[]>([])
+  const [tasks, setTasks] = useState<ITask[]>([])
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -27,7 +20,7 @@ export function App() {
     if (!taskInput) return
     
     setTasks(prevTasks => {
-      const newTask: Task = {
+      const newTask: ITask = {
         createdAt: date,
         text: taskInput,
         isFinished: false
@@ -92,36 +85,19 @@ export function App() {
             <span className={styles.resultBox}>{tasks.length}</span>
           </div>
           <div>
-            <span>Tarefas criadas</span>
+            <span>Tarefas concluídas</span>
             <span className={styles.resultBox}>{tasks.filter(task => task.isFinished == true).length} de {tasks.length}</span>
           </div>
         </div>
 
         <div className={styles.tasks}>
           {tasks.map(task => (
-            <div key={task.createdAt} className={`${styles.task} ${task.isFinished && styles.finished}`}>
-              <div>
-                {task.isFinished ? (
-                  <button onClick={() => handleUncheckFinished(task.createdAt)}>
-                      <img src={checkIcon} style={{width: 24, height: 24}}/>
-                  </button>
-                ) : (
-                  <button onClick={() => handleCheckFinished(task.createdAt)}>
-                    <img src={uncheckIcon} style={{width: 24, height: 24}}/>
-                  </button>
-                )}
-              </div>
-
-              <p>
-                {task.text}
-              </p>
-
-              <div>
-                <button onClick={() => handleDeleteTask(task.createdAt)}>
-                  <img src={trashIcon} style={{width: 24, height: 24}}/>
-                </button>
-              </div>
-            </div>
+            <Task 
+              task={task}
+              handleCheckFinished={handleCheckFinished}
+              handleUncheckFinished={handleUncheckFinished}
+              handleDeleteTask={handleDeleteTask}
+            />
           ))}
         </div>
       </div>
